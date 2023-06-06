@@ -1,3 +1,4 @@
+from os import read
 import tkinter as tk
 from PIL import Image,ImageTk
 
@@ -8,6 +9,11 @@ y = 4 # Sprite Sheet Column
 w = tk.Tk()
 w.attributes("-topmost",True)
 w.geometry("400x300")
+
+m = open("map1.txt")
+r = read(m)
+r = list()
+
 
 c = tk.Canvas(width=380,height=280)
 c.pack()

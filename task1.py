@@ -1,4 +1,5 @@
 import tkinter as tk
+import csv
 """
 Task 1
 Read the map1.txt file and convert to a map that you can navigate a
@@ -9,9 +10,16 @@ w.geometry("925x475")
 w.attributes('-topmost',True)
 c = tk.Canvas(height=475,width=900,bg="#00EEEE")
 c.pack()
+
+
 f = open('map1.txt')
+data = f.read()
+print(data)
+for i in data:
+    print(i)
+    
 
-
+exit()
 rec = c.create_rectangle(20,20,40,40,fill="#006400")
 def keyPress(event):
     key = event.keysym
